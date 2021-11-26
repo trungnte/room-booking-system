@@ -5,4 +5,5 @@ RUN apt-get install -y vim
 WORKDIR /var/www/code/api
 COPY  . .
 RUN yarn install
+RUN yarn add dotenv
 CMD tail -f /dev/null

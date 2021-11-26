@@ -15,7 +15,8 @@ services:
       - ./api:/var/www/code/api
       - /var/www/code/api/node_modules/
     ports:
-      - 3000:3000
+      - 7000:7000
+
     networks:
       - my-network
 
@@ -29,7 +30,7 @@ services:
       - ./web:/var/www/code/web
       - /var/www/code/web/node_modules/
     ports:
-      - 7000:7000
+      - 3000:3000
     networks:
       - my-network
   
