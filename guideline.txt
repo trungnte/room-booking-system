@@ -1,0 +1,20 @@
+For developers
+
+- Enter root directory project
+- Run command: 'docker-compose up'
+* Because API and Web have not finished, so we must use docker exec to api-nodejs and web-nodejs to develop.
+- 'docker ps -a' to find the web and api container.
+CONTAINER ID   IMAGE                           COMMAND                  CREATED        STATUS                    PORTS                                                                                            NAMES
+1608fad42b74   room-booking-system_my-api      "docker-entrypoint.s…"   10 hours ago   Up 29 seconds             0.0.0.0:7000->7000/tcp, :::7000->7000/tcp                                                        api-nodejs
+91e41eda49c4   room-booking-system_my-web      "docker-entrypoint.s…"   10 hours ago   Up 30 seconds             0.0.0.0:3000->3000/tcp, :::3000->3000/tcp                                                        web-nodejs
+9fedfbd3e796   mongo                           "docker-entrypoint.s…"   11 hours ago   Up 30 seconds             0.0.0.0:27017->27017/tcp, :::27017->27017/tcp                                                    my-mongodb
+23e27429cd38   mongo-express                   "tini -- /docker-ent…"   11 hours ago   Up 29 seconds             0.0.0.0:8081->8081/tcp, :::8081->8081/tcp                                                        my-mongodb-express
+
+- Start manually them.
+* For web: 
+ docker exec -ti web-nodejs /bin/bash
+ view at port 3000
+
+* For api:
+ docker exec -ti api-nodejs /bin/bash
+ To be done....
