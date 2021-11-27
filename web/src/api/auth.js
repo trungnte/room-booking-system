@@ -3,6 +3,7 @@ import { getDecodedToken } from './token'
 
 // Sends a POST request to /auth/sign-up on the server, with first name, last name, email & password registering the user and returning the JWT
 export function signUp({ firstName, lastName, email, password }) {
+  console.log(` >>> firstName: ${firstName} lastName: ${lastName} email: ${email} password: ${password}`);
   return api.post('/auth/sign-up', { firstName, lastName, email, password })
     .then(res => {
       const token = res.data.token
