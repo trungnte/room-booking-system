@@ -30,5 +30,6 @@
     "autoprefixer-stylus": "^0.14.0",
     "concurrently": "^3.5.1",
     "stylus": "^0.54.5"
-  }
+  },
+  "proxy":"http://api-nodejs:7000"
 }

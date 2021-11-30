@@ -7,7 +7,7 @@
   "dependencies": {
     "body-parser": "^1.18.2",
     "cors": "^2.8.4",
-    "express": "^4.16.2",
+    "express": "^4.17.1",
     "jsonwebtoken": "^8.1.0",
     "moment": "^2.20.1",
     "moment-timezone": "^0.5.14",
@@ -34,7 +34,7 @@
     "prettier": "^1.10.2"
   },
   "scripts": {
-    "dev": "nodemon server.js",
+    "dev": "node server.js",
     "drop": "node models/drop.js",
     "seed": "node models/seed.js",
     "start": "node server.js",

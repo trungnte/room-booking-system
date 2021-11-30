@@ -28,16 +28,17 @@ server.use((error, req, res, next) => {
   })
 })
 
-server.get("/", (req, res) => {
+// check server is running
+server.get('/', (req, res) => {
   res.send('Hello World');
 });
 
 // Read port and host from the configuration file
-server.listen(config.port, config.host, error => {
+server.listen(config.port, error => {
   if (error) {
     console.error('Error starting', error)
   } else {
     console.info('Express listening on port ', config.port);
-    console.info('Express listening on host ', config.host);
+    console.log(`Express listening on host ${config.port}`);
   }
 })
